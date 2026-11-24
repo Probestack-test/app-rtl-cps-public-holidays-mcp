@@ -1,0 +1,85 @@
+openapi: 3.0.3
+info:
+  description: "Public holiday lookup for any country, backed by the free Nager.Date\
+    \ public holiday API (no API key required)."
+  title: Public Holidays MCP
+  version: 1.0.0
+servers:
+- url: https://date.nager.at/api/v3
+paths:
+  /PublicHolidays/{year}/{countryCode}:
+    get:
+      description: "Returns every public holiday for the given ISO country code and\
+        \ year, with local and English names."
+      operationId: list_public_holidays
+      parameters:
+      - description: "Four-digit year, e.g. 2026."
+        explode: false
+        in: path
+        name: year
+        required: true
+        schema:
+          type: integer
+        style: simple
+      - description: "ISO 3166-1 alpha-2 country code, e.g. US, IN, GB."
+        explode: false
+        in: path
+        name: countryCode
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                type: array
+          description: Public holidays for the year
+      summary: List all public holidays for a country in a given year
+      x-accepts: application/json
+  /NextPublicHolidays/{countryCode}:
+    get:
+      description: Returns the next public holidays after today's date for the given
+        country.
+      operationId: get_upcoming_public_holidays
+      parameters:
+      - description: "ISO 3166-1 alpha-2 country code, e.g. US, IN, GB."
+        explode: false
+        in: path
+        name: countryCode
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                type: array
+          description: Upcoming public holidays
+      summary: Get the next upcoming public holidays for a country
+      x-accepts: application/json
+  /AvailableCountries:
+    get:
+      description: "Returns the full list of supported country codes and names, useful\
+        \ for validating a country before looking up its holidays."
+      operationId: list_supported_countries
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: object
+                type: array
+          description: Supported countries
+      summary: List every country this API has holiday data for
+      x-accepts: application/json
+components:
+  schemas: {}
