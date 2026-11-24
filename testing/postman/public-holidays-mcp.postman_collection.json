@@ -1,0 +1,521 @@
+{
+  "info" : {
+    "_postman_id" : "ed9a7263-c5c2-458e-aebd-72f2cd5a5360",
+    "name" : "Public Holidays MCP",
+    "description" : "Generated Postman collection for public-holidays-mcp",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable" : [ {
+    "key" : "baseUrl",
+    "value" : "http://localhost:8080",
+    "type" : "string"
+  }, {
+    "key" : "bearerToken",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "key" : "resourceId",
+    "value" : "sample-id",
+    "type" : "string"
+  }, {
+    "key" : "clientId",
+    "value" : "generated-service-client",
+    "type" : "string"
+  }, {
+    "key" : "clientSecret",
+    "value" : "change-me",
+    "type" : "string"
+  }, {
+    "key" : "scope",
+    "value" : "api.read api.write",
+    "type" : "string"
+  } ],
+  "item" : [ {
+    "name" : "Health",
+    "item" : [ {
+      "name" : "Health",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Liveness",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health/liveness",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health", "liveness" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health/liveness",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health", "liveness" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Readiness",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/health/readiness",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "health", "readiness" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/health/readiness",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "health", "readiness" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Metrics",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/metrics",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "metrics" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/metrics",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "metrics" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    }, {
+      "name" : "Prometheus",
+      "request" : {
+        "auth" : {
+          "type" : "noauth"
+        },
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/actuator/prometheus",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "actuator", "prometheus" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "auth" : {
+            "type" : "noauth"
+          },
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/actuator/prometheus",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "actuator", "prometheus" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"status\" : \"UP\"\n}"
+      } ]
+    } ]
+  }, {
+    "name" : "Security",
+    "item" : [ {
+      "name" : "Get OAuth2 Token",
+      "request" : {
+        "auth" : {
+          "type" : "basic",
+          "basic" : [ {
+            "key" : "username",
+            "value" : "{{clientId}}",
+            "type" : "string"
+          }, {
+            "key" : "password",
+            "value" : "{{clientSecret}}",
+            "type" : "string"
+          } ]
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/x-www-form-urlencoded"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "body" : {
+          "mode" : "urlencoded",
+          "urlencoded" : [ {
+            "key" : "grant_type",
+            "value" : "client_credentials",
+            "type" : "text"
+          }, {
+            "key" : "scope",
+            "value" : "{{scope}}",
+            "type" : "text"
+          } ]
+        },
+        "url" : {
+          "raw" : "{{baseUrl}}/oauth2/token",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "oauth2", "token" ]
+        }
+      },
+      "event" : [ {
+        "listen" : "test",
+        "script" : {
+          "type" : "text/javascript",
+          "exec" : [ "const json = pm.response.json();", "if (json.access_token) {", "  pm.collectionVariables.set(\"bearerToken\", json.access_token);", "}" ]
+        }
+      } ]
+    } ]
+  }, {
+    "name" : "API",
+    "item" : [ {
+      "name" : "List all public holidays for a country in a given year",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/PublicHolidays/1/sample-countryCode",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "PublicHolidays", "1", "sample-countryCode" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/PublicHolidays/1/sample-countryCode",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "PublicHolidays", "1", "sample-countryCode" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "\"sample-value\""
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/PublicHolidays/1/sample-countryCode",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "PublicHolidays", "1", "sample-countryCode" ]
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-11-24T15:19:08.362120013Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    }, {
+      "name" : "Get the next upcoming public holidays for a country",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/NextPublicHolidays/sample-countryCode",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "NextPublicHolidays", "sample-countryCode" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/NextPublicHolidays/sample-countryCode",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "NextPublicHolidays", "sample-countryCode" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "\"sample-value\""
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/NextPublicHolidays/sample-countryCode",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "NextPublicHolidays", "sample-countryCode" ]
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-11-24T15:19:08.364740547Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    }, {
+      "name" : "List every country this API has holiday data for",
+      "request" : {
+        "method" : "GET",
+        "header" : [ {
+          "key" : "Authorization",
+          "value" : "Bearer {{bearerToken}}"
+        }, {
+          "key" : "Accept",
+          "value" : "application/json"
+        } ],
+        "url" : {
+          "raw" : "{{baseUrl}}/AvailableCountries",
+          "host" : [ "{{baseUrl}}" ],
+          "path" : [ "AvailableCountries" ]
+        }
+      },
+      "response" : [ {
+        "name" : "OK",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/AvailableCountries",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "AvailableCountries" ]
+          }
+        },
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "\"sample-value\""
+      }, {
+        "name" : "Bad Request",
+        "originalRequest" : {
+          "method" : "GET",
+          "header" : [ {
+            "key" : "Authorization",
+            "value" : "Bearer {{bearerToken}}"
+          }, {
+            "key" : "Accept",
+            "value" : "application/json"
+          } ],
+          "url" : {
+            "raw" : "{{baseUrl}}/AvailableCountries",
+            "host" : [ "{{baseUrl}}" ],
+            "path" : [ "AvailableCountries" ]
+          }
+        },
+        "status" : "Bad Request",
+        "code" : 400,
+        "_postman_previewlanguage" : "json",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json"
+        } ],
+        "cookie" : [ ],
+        "body" : "{\n  \"timestamp\" : \"2026-11-24T15:19:08.365010823Z\",\n  \"status\" : 400,\n  \"code\" : \"request_failed\",\n  \"userMessage\" : \"Request failed\",\n  \"systemMessage\" : \"Sample error for documentation purposes\",\n  \"path\" : \"{{baseUrl}}\",\n  \"correlationId\" : \"sample-correlation-id\"\n}"
+      } ]
+    } ]
+  } ]
+}

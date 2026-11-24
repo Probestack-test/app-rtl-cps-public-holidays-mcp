@@ -1,0 +1,93 @@
+{
+  "info" : {
+    "name" : "public-holidays-mcp Mock Test Collection",
+    "description" : "Generated from ForgeSphere mock endpoint definitions.",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable" : [ {
+    "key" : "mockBaseUrl",
+    "value" : "https://forgesphere.probestack.io/mock-api/v1/api/mocks/mock-0397f201"
+  }, {
+    "key" : "userEmail",
+    "value" : ""
+  }, {
+    "key" : "id",
+    "value" : "sample-id"
+  } ],
+  "item" : [ {
+    "name" : "GET /PublicHolidays/{year}/{countryCode}",
+    "request" : {
+      "method" : "GET",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/PublicHolidays/{year}/{countryCode}"
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 200",
+      "code" : 200,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "[{}]"
+    } ]
+  }, {
+    "name" : "GET /NextPublicHolidays/{countryCode}",
+    "request" : {
+      "method" : "GET",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/NextPublicHolidays/{countryCode}"
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 200",
+      "code" : 200,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "[{}]"
+    } ]
+  }, {
+    "name" : "GET /AvailableCountries",
+    "request" : {
+      "method" : "GET",
+      "header" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "x-user-email",
+        "value" : "{{userEmail}}"
+      } ],
+      "url" : {
+        "raw" : "{{mockBaseUrl}}/AvailableCountries"
+      }
+    },
+    "response" : [ {
+      "name" : "Mock 200",
+      "code" : 200,
+      "status" : "OK",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ],
+      "body" : "[{}]"
+    } ]
+  } ]
+}

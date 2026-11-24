@@ -1,0 +1,79 @@
+{
+  "artifactId" : "public-holidays-mcp",
+  "resourceId" : "6b05a94107a24164ad070346",
+  "generatedAt" : "2026-11-24T15:19:09.146686806Z",
+  "mock" : {
+    "id" : "429d1b6c-2841-47e6-9061-fcaf0e2def39",
+    "microserviceId" : null,
+    "specMetadataId" : "6b05a9ce69c50660bb9b1e60",
+    "apiSpecName" : "Public Holidays MCP",
+    "name" : "mock-public-holidays-mcp",
+    "mockServiceName" : "mock-public-holidays-mcp",
+    "mockServerUrl" : "https://forgesphere.probestack.io/mock-api/v1/api/mocks/mock-0397f201",
+    "mockUrl" : "mock-0397f201",
+    "isPrivate" : false,
+    "delayMs" : 0,
+    "responseLatencyMs" : 0,
+    "requestCount" : 3,
+    "createdAt" : "2026-11-24T15:14:45.356Z",
+    "updatedAt" : "2026-11-24T15:14:48.483Z"
+  },
+  "endpoints" : [ {
+    "id" : "58da2e58-8c67-4d49-8c7e-b767b08e2b48",
+    "isActive" : true,
+    "request" : {
+      "method" : "GET",
+      "path" : "/PublicHolidays/{year}/{countryCode}",
+      "bodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true
+    },
+    "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "body" : "[{}]",
+      "delayMs" : 0
+    }
+  }, {
+    "id" : "faef8864-8a51-400b-80bc-c767036d0467",
+    "isActive" : true,
+    "request" : {
+      "method" : "GET",
+      "path" : "/NextPublicHolidays/{countryCode}",
+      "bodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true
+    },
+    "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "body" : "[{}]",
+      "delayMs" : 0
+    }
+  }, {
+    "id" : "1a1be73d-e74c-4907-b1cc-3fbd4883c2cb",
+    "isActive" : true,
+    "request" : {
+      "method" : "GET",
+      "path" : "/AvailableCountries",
+      "bodySample" : null,
+      "validationMode" : "NONE",
+      "validationSchema" : null,
+      "validateMethod" : true
+    },
+    "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "application/json"
+      },
+      "body" : "[{}]",
+      "delayMs" : 0
+    }
+  } ]
+}
